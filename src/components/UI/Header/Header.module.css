@@ -1,0 +1,86 @@
+.header {
+   display: flex;
+   background-color: #21243d;
+   justify-content: space-between;
+   padding: 1rem;
+   position: sticky;
+   top: 0;
+   width: 100%;
+   z-index: 10;
+   /* opacity: 0;
+	animation: opacity 1s ease-in 1s forwards;
+   margin: -1px;
+   transition: 1s; */
+}
+
+.header > a {
+   display: block;
+   max-width: 120px;
+}
+
+/* styles for nav bar */
+.nav-bar {
+   align-items: center;
+   display: flex;
+   justify-content: flex-end;
+   max-width: 20rem;
+   width: 100%;
+}
+
+.active > span {
+   color: #ea1d5d;
+}
+
+.nav-bar__link {
+   display: flex;
+   align-items: center;
+   column-gap: 10px;
+   color: #fff;
+   line-height: 1.5rem;
+   padding: 5px;
+   font-size: 10px;
+}
+
+.nav-bar__list--after {
+   display: none;
+}
+
+/* styles fot nva menu btn */
+.menu-btn {
+   display: flex;
+   width: 5.5vw;
+}
+
+.menu-btn img {
+   position: relative;
+   z-index: 20;
+   width: 100%;
+}
+
+@media screen and (min-width: 425px) {
+   .header > a {
+      max-width: 150px;
+   }
+
+   .nav-bar__link {
+      font-size: 11px;
+   }
+}
+@media screen and (min-width: 480px) {
+   .nav-bar__link {
+      font-size: 16px;
+   }
+}
+@media screen and (min-width: 768px) {
+   .nav-bar {
+      max-width: 23rem;
+   }
+
+   .nav-bar__link {
+      font-size: 20px;
+   }
+
+   .header > a {
+      max-width: 220px;
+   }
+}
