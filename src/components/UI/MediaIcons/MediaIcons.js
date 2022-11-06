@@ -10,7 +10,7 @@ const MediaIcons = () => {
    const context = useContext(Context);
    const github = context.userData['data']['html_url'];
    const website = context.userData['data']['blog'];
-   const twitter = context.userData['data']['twitter_username'];
+   const twitter = context.userData[ 'data' ][ 'twitter_username' ];
 
    return (
       <div className={classes['social-media']}>
