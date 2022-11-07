@@ -1,3 +1,6 @@
+# Solution to AltSchool second semester examination
+## Live Link: [babboeCode AltSchool second semester exam solution](https://github-portfolio-api-fetch.netlify.app/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
