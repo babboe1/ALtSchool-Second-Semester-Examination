@@ -51,12 +51,14 @@
 
 .project-tile__nav {
    display: flex;
+   flex-direction: column;
    justify-content: center;
+   align-items: center;
    margin: 0 auto;
    width: 100%;
    max-width: 40rem;
-   column-gap: 2rem;
-   padding-bottom: 1rem;
+   row-gap: 1rem;
+   padding: 2rem 0;
 }
 
 .project-blur:hover {
@@ -123,6 +125,16 @@
    box-shadow: -10px -10px 9px -9px rgba(0, 0, 0, 0.75);
 }
 
+.disable {
+   cursor: not-allowed;
+   background: rgb(146, 146, 146);
+}
+.disable:hover {
+   color: red;
+   font-weight: bold;
+   transform: scale(1)  !important;
+}
+
 @media screen and (min-width: 480px) {
    .project-content {
       width: 25rem;
@@ -131,6 +143,12 @@
 @media screen and (min-width: 768px) {
    .project-content {
       width: 42rem;
+   }
+
+   .project-tile__nav {
+      flex-direction: row;
+      column-gap: 2rem;
+      padding: 0 0 1rem;
    }
 }
 @media screen and (min-width: 1200px) {
