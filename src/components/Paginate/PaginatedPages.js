@@ -4,6 +4,7 @@ import Context from '../Context/Context';
 import Repositories from '../Pages/Repositories/Repositories';
 import Spinner from '../UI/Spinner/Spinner';
 import './Paginate.css';
+import classes from '../Pages/Repositories/Repos.module.css';
 
 const PaginatedPages = ({ itemsPerPage }) => {
    const [currentItems, setCurrentItems] = useState(null);
@@ -11,8 +12,12 @@ const PaginatedPages = ({ itemsPerPage }) => {
    const [itemOffset, setItemOffset] = useState(0);
    const context = useContext(Context);
    const repoData = context.userRepos.data;
-   // eslint-disable-next-line react-hooks/exhaustive-deps
-   const repos = repoData ? repoData : [];
+   const repos = repoData ? repoData : '';
+   const loader = context.errorMsg ? (
+      <p className={classes.errorMsg}>{context.errorMsg}</p>
+   ) : (
+      <Spinner />
+   );
 
    useEffect(() => {
       // Fetch items from another resources.
@@ -32,7 +37,7 @@ const PaginatedPages = ({ itemsPerPage }) => {
    };
 
    return !repoData ? (
-      <Spinner />
+      loader
    ) : (
       <>
          <Repositories currentItems={currentItems} />
