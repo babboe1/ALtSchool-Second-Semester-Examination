@@ -7,14 +7,14 @@ import Context from '../../../Context/Context';
 
 const NavItems = () => {
    const context = useContext(Context);
-   const repoCount = context.userRepos.data ? context.userRepos.data.length : '';
+   const repoCount = context.userRepos.data
+      ? context.userRepos.data.length
+      : '';
 
-   console.log(context.userRepos ? context.userRepos.data[0] : '');
-   
    return (
       <>
          <ul className={classes['nav-bar__list']}>
-            <NavItem URL="/overview">
+            <NavItem URL="/">
                <img src={overviewIcon} alt="icon" /> <p>Overview</p>
             </NavItem>
             <NavItem URL="/repos">

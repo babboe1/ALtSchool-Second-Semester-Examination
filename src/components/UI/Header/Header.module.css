@@ -31,6 +31,10 @@
    color: #ea1d5d;
 }
 
+.active.unselected > span {
+   color: white;
+}
+
 .nav-bar__link {
    display: flex;
    align-items: center;
