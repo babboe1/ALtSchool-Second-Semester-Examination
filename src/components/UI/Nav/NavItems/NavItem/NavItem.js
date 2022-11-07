@@ -5,7 +5,7 @@ import classes from '../../../Header/Header.module.css';
 const NavItem = (props) => {
    return (
       <li onMouseOver={props.hover}>
-         <NavLink activeClassName={classes.active} to={props.URL}>
+         <NavLink to={props.URL}>
             <span className={classes['nav-bar__link']}>{props.children}</span>
          </NavLink>
       </li>
