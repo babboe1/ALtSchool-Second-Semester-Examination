@@ -9,6 +9,24 @@
    row-gap: 2rem;
    animation: fade-in 1s ease-in forwards;
 }
+.readmeBox {
+   display: flex;
+   flex-direction: column;
+   row-gap: 1rem;
+   width: 100;
+   max-width: 1000px;
+   text-align: center;
+   background-color: #f6f8fa;
+   border: 1px solid #e1e4e8;
+   border-radius: 15px;
+   padding: 16px;
+   margin-top: 16px;
+}
+
+.readmeBox ol {
+   list-style: none;
+}
+
 @keyframes fade-in {
    0% {
       opacity: 0;
