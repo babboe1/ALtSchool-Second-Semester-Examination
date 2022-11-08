@@ -6,10 +6,7 @@
 
 .about-section__title {
    padding: 2rem 0 0;
-   background: #121fcf;
-   background: linear-gradient(to right, #121fcf 0%, #cf1512 100%);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
+   color: yellow;
    font-size: 2rem;
    text-align: center;
 }

@@ -38,6 +38,7 @@ const Repo = ( props ) => {
             />
          </RepoTile>
          {context.readme}
+         <div id="readme" className={classes['readmeBox']}></div>
       </div>
    );
 };

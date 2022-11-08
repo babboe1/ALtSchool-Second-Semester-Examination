@@ -13,7 +13,7 @@ const Repositories = ({ currentItems }) => {
               about={currentItems[index].description}
               key={currentItems[index].id}
            >
-              <RepoLinkBtn name={currentItems[index].name} act="More Info!!!"/>
+              <RepoLinkBtn name={currentItems[index].name} act="More Info!!!" />
            </RepoTile>
         ))
       : null;
