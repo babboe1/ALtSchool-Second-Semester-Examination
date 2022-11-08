@@ -32,22 +32,6 @@ const App = () => {
          .catch((error) => {
             setErrorMsg(error.message);
          });
-      // instance
-      //    .get('/Loopstudio-Landing-Page')
-      //    .then((res) => {
-      //       // console.log(res);
-      //    })
-      //    .catch((error) => {
-      //       setErrorMsg(error.message);
-      //    });
-      // instance
-      //    .get('/Loopstudio-Landing-Page/contents/README.md')
-      //    .then((res) => {
-      //       // console.log(res);
-      //    })
-      //    .catch((error) => {
-      //       setErrorMsg(error.message);
-      //    });
    }, []);
 
    const value = {
