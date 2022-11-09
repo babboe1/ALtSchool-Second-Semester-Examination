@@ -18,13 +18,29 @@
    max-width: 120px;
 }
 
+.header ul {
+   display: none;
+}
+
+ul.flex {
+   color: white;
+   display: flex;
+   font-size: 1.5rem;
+   flex-direction: column;
+   list-style: none;
+   padding: 1rem 0 3.5rem;
+   row-gap: 1rem;
+}
+
 /* styles for nav bar */
 .nav-bar {
    align-items: center;
    display: flex;
-   justify-content: flex-end;
    max-width: 20rem;
    width: 100%;
+}
+.header .nav-bar {
+   justify-content: flex-end;
 }
 
 .active > span {
@@ -61,6 +77,13 @@
    width: 100%;
 }
 
+.repo-count {
+   border-radius: 50%;
+   background-color: #484848;
+   padding: 5px;
+   color: #eac71d;
+}
+
 @media screen and (min-width: 425px) {
    .header > a {
       max-width: 150px;
@@ -75,9 +98,14 @@
       font-size: 16px;
    }
 }
+
 @media screen and (min-width: 768px) {
+   .header ul {
+      display: flex;
+      column-gap:10px;
+   }
    .nav-bar {
-      max-width: 23rem;
+      max-width: 32rem;
    }
 
    .nav-bar__link {
