@@ -7,7 +7,6 @@
    /* border: 1px solid ; */
 }
 ul {
-   display: flex;
    list-style: none;
 }
 
@@ -43,5 +42,9 @@ body {
 html {
    background: url(./assets/images/repobg.jpg);
 	background-size: cover;
+}
+
+#readme img {
+   width: 100%;
 }
 
