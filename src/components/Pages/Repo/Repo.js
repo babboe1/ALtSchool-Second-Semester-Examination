@@ -6,11 +6,14 @@ import classes from './Repo.module.css';
 import githubImage from '../../../assets/icons/github.svg';
 import RepoLinkBtn from '../Repositories/RepoTile/RepoLinkBtn/RepoLinkBtn';
 import Context from '../../Context/Context';
+import { useNavigate } from 'react-router-dom';
 
 const Repo = ( props ) => {
+   const nav = useNavigate();
    const context = useContext(Context);
    return (
-      <div className={classes['repositories']}>
+      <div className={ classes[ 'repositories' ] }>
+         <button className={classes['myButton']} onClick={()=> nav(-1)} >Go Back</button>
          <RepoTile name={props.name} about={props.about}>
             <ViewRepoBtn
                sty="flip-card__action"

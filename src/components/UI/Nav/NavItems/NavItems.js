@@ -29,8 +29,8 @@ const NavItems = (props) => {
                <img src={repoIcon} alt="icon" />{' '}
                {repoCount}
             </NavItem>
-            <NavItem URL="/test">
-               <img src={overviewIcon} alt="icon" /> <p>404 Page</p>
+            <NavItem URL="/error">
+               <img src={overviewIcon} alt="icon" /> <p>Error&404</p>
             </NavItem>
          </ul>
          <DrawerToggle />
