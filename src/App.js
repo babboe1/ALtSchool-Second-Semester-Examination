@@ -7,12 +7,14 @@ import Header from './components/UI/Header/Header';
 import PaginatedPages from './components/Paginate/PaginatedPages';
 import Repo from './components/Pages/Repo/Repo';
 import Readme from './components/Pages/Repositories/RepoTile/ViewRepoBtn/Readme/Readme';
+import Backdrop from './components/Modals/Backdrop/Backdrop';
 
 const App = () => {
    const [userData, setUserData] = useState('');
    const [userRepos, setUserRepos] = useState('');
    const [ errorMsg, setErrorMsg ] = useState();
    const [ readme, setReadme ] = useState('');
+   const [ menuModal, setMenuModal ] = useState(false);
    
    useEffect(() => {
       axios
@@ -34,12 +36,22 @@ const App = () => {
          });
    }, []);
 
+   const showMenuModal = () => {
+      setMenuModal( !menuModal );
+   }
+   const removeMenuModal = () => {
+      setMenuModal( false );
+   }
+
    const value = {
       userData,
       userRepos,
       errorMsg,
       readme,
       setReadme,
+      menuModal,
+      showMenuModal,
+      removeMenuModal
    };
 
    const routeData = userRepos ? userRepos.data : [];
@@ -56,6 +68,7 @@ const App = () => {
    return (
       <Context.Provider value={value}>
          <Header />
+         <Backdrop click={()=>setMenuModal(false) } />
          <main>
             <Routes>
                <Route path="/" element={<Overview />} />
