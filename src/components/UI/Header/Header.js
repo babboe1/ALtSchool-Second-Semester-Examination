@@ -15,9 +15,6 @@ const Header = () => {
 
          <Nav />
          <MenuModal>
-            {/* <Link to="/">
-               <Image src={Logo} maxWidth="10rem"/>
-            </Link> */}
             <Nav ulClass="flex" />
          </MenuModal>
       </header>

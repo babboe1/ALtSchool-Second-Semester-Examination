@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import classes from '../../Header/Header.module.css';
 import NavItem from './NavItem/NavItem';
 import overviewIcon from '../../../../assets/icons/overview.svg';
+import errorIcon from '../../../../assets/icons/error.svg';
 import repoIcon from '../../../../assets/icons/repo.svg';
 import Context from '../../../Context/Context';
 import DrawerToggle from '../DrawerToggle/DrawerToggle';
@@ -30,7 +31,7 @@ const NavItems = (props) => {
                {repoCount}
             </NavItem>
             <NavItem URL="/error">
-               <img src={overviewIcon} alt="icon" /> <p>Error&404</p>
+               <img src={errorIcon} alt="icon" /> <p>Error&404</p>
             </NavItem>
          </ul>
          <DrawerToggle />
