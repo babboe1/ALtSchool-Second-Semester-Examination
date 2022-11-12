@@ -7,7 +7,10 @@ const Backdrop = (props) => {
    const context = useContext(Context);
    const holder = context.menuModal
       ? ReactDOM.createPortal(
-           <button className={classes['backdrop']} onClick={props.click}></button>,
+           <button
+              className={classes['backdrop']}
+              onClick={props.click}
+           ></button>,
            document.getElementById('backdrop-root'),
         )
       : null;
