@@ -43,6 +43,7 @@
    width: 100%;
    max-width: 10rem;
    margin: 0 auto;
+   text-align: center;
 }
 
 .myButton:hover {
