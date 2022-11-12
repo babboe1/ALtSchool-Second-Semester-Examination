@@ -23,6 +23,7 @@ header .active > span {
    color: #ea1d5d;
 }
 
+
 body {
    width: 100%;
    max-width: 1440px;
@@ -46,5 +47,10 @@ html {
 
 #readme img {
    width: 100%;
+}
+
+.StopScroll {
+	height: 100%;
+	overflow: hidden;
 }
 
