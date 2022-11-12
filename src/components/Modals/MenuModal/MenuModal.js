@@ -8,7 +8,10 @@ const MenuModal = ( { children } ) => {
    const holder = (
       <div
          className={classes['Modal']}
-         style={{
+         style={ {
+            position: 'fixed',
+            top: '0',
+            right: '0',
             transform: context.menuModal
                ? 'translateY(70px)'
                : 'translateY(-100%)',
