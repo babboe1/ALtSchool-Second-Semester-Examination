@@ -9,10 +9,10 @@ import classes from '../Pages/Repositories/Repos.module.css';
 const PaginatedPages = ({ itemsPerPage }) => {
    const [currentItems, setCurrentItems] = useState(null);
    const [pageCount, setPageCount] = useState(0);
-   const [ itemOffset, setItemOffset ] = useState( 0 );
-   const context = useContext( Context );
+   const [itemOffset, setItemOffset] = useState(0);
+   const context = useContext(Context);
    const [repoData, setRepoData] = useState(context.userRepos.data);
-   
+
    context.currentPageItems = currentItems;
    context.setCurrentPageItems = setRepoData;
    const repos = repoData ? repoData : '';
@@ -37,6 +37,11 @@ const PaginatedPages = ({ itemsPerPage }) => {
       //    `User requested page number ${event.selected}, which is offset ${newOffset}`,
       // );
       setItemOffset(newOffset);
+   };
+
+   window.onload = () => {
+      setRepoData(context.userRepos.data);
+      return loader;
    };
 
    return !repoData ? (
