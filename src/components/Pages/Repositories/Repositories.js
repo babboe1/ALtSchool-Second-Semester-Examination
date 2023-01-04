@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './Repos.module.css';
 import RepoLinkBtn from './RepoTile/RepoLinkBtn/RepoLinkBtn';
 import RepoTile from './RepoTile/RepoTile';
+import SearchBar from '../../UI/Search/SearchBar';
 
 const Repositories = ({ currentItems }) => {
    const repos = currentItems ? currentItems : null;
@@ -18,7 +19,14 @@ const Repositories = ({ currentItems }) => {
         ))
       : null;
 
-   return <div className={classes.repositories}>{repoTiles}</div>;
+   return (
+      <>
+         <SearchBar />
+         <div className={classes.test}>
+            <section className={classes.repositories}>{repoTiles}</section>
+         </div>
+      </>
+   );
 };
 
 export default Repositories;
