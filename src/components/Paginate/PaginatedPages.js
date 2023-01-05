@@ -9,9 +9,12 @@ import classes from '../Pages/Repositories/Repos.module.css';
 const PaginatedPages = ({ itemsPerPage }) => {
    const [currentItems, setCurrentItems] = useState(null);
    const [pageCount, setPageCount] = useState(0);
-   const [itemOffset, setItemOffset] = useState(0);
-   const context = useContext(Context);
-   const repoData = context.userRepos.data;
+   const [ itemOffset, setItemOffset ] = useState( 0 );
+   const context = useContext( Context );
+   const [repoData, setRepoData] = useState(context.userRepos.data);
+   
+   context.currentPageItems = currentItems;
+   context.setCurrentPageItems = setRepoData;
    const repos = repoData ? repoData : '';
    const loader = context.errorMsg ? (
       <p className={classes.errorMsg}>{context.errorMsg}</p>
