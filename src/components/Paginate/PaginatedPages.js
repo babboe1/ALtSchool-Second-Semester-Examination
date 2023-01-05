@@ -25,7 +25,7 @@ const PaginatedPages = ({ itemsPerPage }) => {
    useEffect(() => {
       // Fetch items from another resources.
       const endOffset = itemOffset + itemsPerPage;
-      console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+      // console.log(`Loading items from ${itemOffset} to ${endOffset}`);
       setCurrentItems(repos.slice(itemOffset, endOffset));
       setPageCount(Math.ceil(repos.length / itemsPerPage));
    }, [itemOffset, itemsPerPage, repos]);
@@ -33,9 +33,9 @@ const PaginatedPages = ({ itemsPerPage }) => {
    // Invoke when user click to request another page.
    const handlePageClick = (event) => {
       const newOffset = (event.selected * itemsPerPage) % repos.length;
-      console.log(
-         `User requested page number ${event.selected}, which is offset ${newOffset}`,
-      );
+      // console.log(
+      //    `User requested page number ${event.selected}, which is offset ${newOffset}`,
+      // );
       setItemOffset(newOffset);
    };
 
