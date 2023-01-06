@@ -5,7 +5,7 @@ const Attribution = () => {
    return (
       <div className={classes['attribution']}>
          &copy; 2022 All rights reserved. Coded by
-         <a href="https://github.com/babboe1">babboeCodes</a>.
+         <a href="https://github.com/babboe1"> babboeCodes</a>.
       </div>
    );
 };
